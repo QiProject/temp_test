@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-fragment:2.1.0-alpha02@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b1142375ca6ddaac1c752ad5b3931e6e/transformed/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b1142375ca6ddaac1c752ad5b3931e6e/transformed/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b1142375ca6ddaac1c752ad5b3931e6e/transformed/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05d8d420c3c7e9de76439dd901ba2801/transformed/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/05d8d420c3c7e9de76439dd901ba2801/transformed/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/05d8d420c3c7e9de76439dd901ba2801/transformed/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-fragment/2.1.0-alpha02/8ec6534f1ab1049a666bda2d6f74416e76474b7c/navigation-fragment-2.1.0-alpha02-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
