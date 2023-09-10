@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+
+    <activity android:id="@+id/mainActivity" android:name="com.example.bdfuv.MainActivity"
+              android:label="MainActivity"/>
+
+    <fragment
+            tools:layout="@layout/fragment_main"
+            android:id="@+id/mainFragment" android:name="com.example.bdfuv.MainFragment"
+              android:label="MainFragment">
+        <action android:id="@+id/action_mainFragment_to_normalConnectFragment"
+                app:destination="@id/normalConnectFragment"/>
+        <action android:id="@+id/action_mainFragment_to_measureInfoFragment" app:destination="@id/measureInfoFragment"/>
+    </fragment>
+
+    <fragment
+            tools:layout="@layout/fragment_setting"
+            android:id="@+id/settingFragment" android:name="com.example.bdfuv.SettingFragment"
+            android:label="SettingFragment"/>
+
+    <fragment
+            tools:layout="@layout/fragment_measurement_ready"
+            android:id="@+id/measurementReadyFragment" android:name="com.example.bdfuv.MeasurementReadyFragment"
+            android:label="MeasurementReadyFragment"/>
+
+
+    <fragment
+            tools:layout="@layout/fragment_normal_question"
+            android:id="@+id/normalQuestionFragment" android:name="com.example.bdfuv.NormalQuestionFragment"
+            android:label="NormalQuestionFragment">
+        <action android:id="@+id/action_normalQuestionFragment_to_measurementReadyFragment"
+                app:destination="@id/measurementReadyFragment"/>
+    </fragment>
+
+
+    <fragment
+            tools:layout="@layout/fragment_normal_measure"
+            android:id="@+id/normalMeasureFragment" android:name="com.example.bdfuv.NormalMeasureFragment"
+            android:label="NormalMeasureFragment">
+        <action android:id="@+id/action_normalMeasureFragment_to_measureCompleteFragment"
+                app:destination="@id/measureCompleteFragment"/>
+    </fragment>
+
+
+    <fragment
+            tools:layout="@layout/fragment_select_device"
+            android:id="@+id/selectDeviceFragment" android:name="com.example.bdfuv.SelectDeviceFragment"
+            android:label="SelectDeviceFragment"/>
+
+    <fragment
+            tools:layout="@layout/fragment_measurement_complete"
+            android:id="@+id/measureCompleteFragment" android:name="com.example.bdfuv.MeasurementCompleteFragment"
+            android:label="MeasureCompleteFragment">
+        <action android:id="@+id/action_measureCompleteFragment_to_normalQuestionFragment"
+                app:destination="@id/normalQuestionFragment"/>
+    </fragment>
+
+
+    <fragment
+            tools:layout="@layout/fragment_normal_connect"
+            android:id="@+id/normalConnectFragment" android:name="com.example.bdfuv.NormalConnectFragment"
+            android:label="NormalConnectFragment">
+        <action android:id="@+id/action_normalConnectFragment_to_measureInfoFragment"
+                app:destination="@id/measureInfoFragment"
+                app:popUpTo="@+id/mainFragment"
+                app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+            tools:layout="@layout/fragment_measure_info"
+            android:id="@+id/measureInfoFragment" android:name="com.example.bdfuv.MeasureInfoFragment"
+            android:label="MeasureInfoFragment">
+        <action android:id="@+id/action_measureInfoFragment_to_normalMeasureFragment"
+                app:destination="@id/normalMeasureFragment"/>
+    </fragment>
+
+
+    <fragment
+            tools:layout="@layout/fragment_device_config"
+            android:id="@+id/deviceConfigFragment" android:name="com.example.bdfuv.DeviceConfigFragment"
+            android:label="DeviceConfigFragment"/>
+
+    <fragment
+            tools:layout="@layout/fragment_test_measurement"
+            android:id="@+id/testMeasurementFragment" android:name="com.example.bdfuv.TestMeasurementFragment"
+            android:label="TestMeasurementFragment"/>
+
+
+    <fragment android:id="@+id/expertFragment"
+              android:name="com.example.bdfuv.ExpertFragment"
+              android:label="ExpertFragment"
+              tools:layout="@layout/fragment_expert"
+    >
+        <action
+                android:id="@+id/action_expert_to_main"
+                app:destination="@id/mainFragment"
+                app:popUpTo="@+id/mainFragment"
+                app:popUpToInclusive="true"/>
+
+        <action android:id="@+id/action_expertFragment_to_appConfigAreaFragment"
+                app:destination="@id/appConfigAreaFragment"/>
+        <action android:id="@+id/action_expertFragment_to_selectDeviceFragment"
+                app:destination="@id/selectDeviceFragment"/>
+        <action android:id="@+id/action_expertFragment_to_deviceConfigFragment"
+                app:destination="@id/deviceConfigFragment"/>
+        <action android:id="@+id/action_expertFragment_to_testMeasurementFragment"
+                app:destination="@id/testMeasurementFragment"/>
+
+    </fragment>
+
+    <fragment
+            tools:layout="@layout/fragment_app_config_areas"
+            android:id="@+id/appConfigAreaFragment"
+            android:name="com.example.bdfuv.AppConfigAreasFragment"
+            android:label="AppConfigAreasFragment">
+        <action android:id="@+id/action_appConfigAreaFragment_to_appConfigQuestionFragment"
+                app:destination="@id/appConfigQuestionFragment"/>
+    </fragment>
+
+    <fragment
+            tools:layout="@layout/fragment_app_config_questions"
+            android:id="@+id/appConfigQuestionFragment"
+            android:name="com.example.bdfuv.AppConfigQuestionsFragment"
+            android:label="AppConfigQuestionsFragment">
+        <action android:id="@+id/action_appConfigQuestionFragment_to_expertFragment"
+                app:destination="@id/expertFragment" app:popUpTo="@+id/expertFragment" app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

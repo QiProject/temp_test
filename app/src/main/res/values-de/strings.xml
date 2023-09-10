@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NIVEA Sun</string>
+    <string name="to">um die</string>
+    <string name="repeat_measurement">"Messung auf einem Hautareal zu wiederholen "</string>
+    <string name="data_protection_policy">Datenschutzerklärung</string>
+    <string name="options">Optionen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="apply_uv_sensor_to">Messe folgende Areale</string>
+    <string name="press">tippe auf</string>
+    <string name="my_continue">weiter</string>
+    <string name="connected">Verbunden</string>
+    <string name="uv_sensor_not_found">Sensor nicht gefunden</string>
+    <string name="searching_for_uv_sensor">Koppeln mit UV Sensor</string>
+    <string name="please_turn_on_uv_sensor">Bitte schalte den UV Sensor ein</string>
+    <string name="welcome">Willkommen</string>
+    <string name="connect">verbinden</string>
+    <string name="measurement_complete">Messungen komplett</string>
+    <string name="welcome_back">Willkommen zurück</string>
+    <string name="press_continue_to_start_new_measurement">WEITER für Abschluss der Messung</string>
+    <string name="please_press_next">Markiere im nächsten Schritt alle Aktivitäten vor der letzten Messung</string>
+    <string name="measurement_session_completed">Messungen beendet</string>
+    <string name="tap_to_finish">BEENDEN</string>
+    <string name="apply_uv_sensor">Setze den Sensor auf das markierte Hautareal und starte die Messung</string>
+</resources>

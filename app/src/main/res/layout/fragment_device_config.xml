@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".DeviceConfigFragment">
+
+    <data>
+        <variable
+                name="gattWrapper"
+                type="com.example.bdfuv.model.BLEGattWrapper"
+        />
+    </data>
+
+    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".EngineerActivity">
+
+                <TextView
+                        android:id="@+id/modeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@{`Mode : ` + String.valueOf(gattWrapper.mode)}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                        android:id="@+id/Ch2SensorModeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{`UV365SensorMode : ` + String.valueOf(gattWrapper.adcmux_ch2)}"
+                        app:layout_constraintStart_toStartOf="@id/modeTextView"
+                        app:layout_constraintTop_toBottomOf="@id/UVUV365Button" />
+
+                <TextView
+                        android:id="@+id/Ch4SensorModeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{`UV385SensorMode : ` + String.valueOf(gattWrapper.adcmux_ch4)}"
+                        app:layout_constraintStart_toStartOf="@id/modeTextView"
+                        app:layout_constraintTop_toBottomOf="@id/UVUV385Button" />
+
+                <Button
+                        android:id="@+id/normalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Normal"
+                        app:layout_constraintStart_toStartOf="@+id/melaninLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/modeTextView" />
+
+                <Button
+                        android:id="@+id/productionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="production"
+                        app:layout_constraintBottom_toBottomOf="@+id/normalButton"
+                        app:layout_constraintStart_toEndOf="@+id/normalButton"
+                        app:layout_constraintTop_toTopOf="@+id/normalButton" />
+
+                <Button
+                        android:id="@+id/SIRUV365Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="SIR"
+                        app:layout_constraintStart_toStartOf="@+id/normalButton"
+                        app:layout_constraintTop_toBottomOf="@id/efm8ChanCurrentChan3EditText" />
+
+                <Button
+                        android:id="@+id/MIRUV365Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="MIR"
+                        app:layout_constraintStart_toEndOf="@id/SIRUV365Button"
+                        app:layout_constraintTop_toTopOf="@id/SIRUV365Button" />
+
+                <Button
+                        android:id="@+id/LIRUV365Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="LIR"
+                        app:layout_constraintStart_toEndOf="@id/MIRUV365Button"
+                        app:layout_constraintTop_toTopOf="@id/SIRUV365Button" />
+
+                <Button
+                        android:id="@+id/WUV365Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="W"
+                        app:layout_constraintStart_toStartOf="@id/SIRUV365Button"
+                        app:layout_constraintTop_toBottomOf="@id/SIRUV365Button" />
+
+                <Button
+                        android:id="@+id/LWUV365Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="LW"
+                        app:layout_constraintStart_toStartOf="@id/MIRUV365Button"
+                        app:layout_constraintTop_toBottomOf="@id/MIRUV365Button" />
+
+                <Button
+                        android:id="@+id/UVUV365Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="UV"
+                        app:layout_constraintStart_toStartOf="@id/LIRUV365Button"
+                        app:layout_constraintTop_toBottomOf="@id/LIRUV365Button" />
+
+                <Button
+                        android:id="@+id/SIRUV385Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="SIR"
+                        app:layout_constraintStart_toStartOf="@id/normalButton"
+                        app:layout_constraintTop_toBottomOf="@id/Ch2SensorModeTextView" />
+
+
+                <Button
+                        android:id="@+id/MIRUV385Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="MIR"
+                        app:layout_constraintStart_toEndOf="@id/SIRUV385Button"
+                        app:layout_constraintTop_toTopOf="@id/SIRUV385Button" />
+
+                <Button
+                        android:id="@+id/LIRUV385Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="LIR"
+                        app:layout_constraintStart_toEndOf="@id/MIRUV385Button"
+                        app:layout_constraintTop_toTopOf="@id/SIRUV385Button" />
+
+                <Button
+                        android:id="@+id/WUV385Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="W"
+                        app:layout_constraintStart_toStartOf="@id/SIRUV385Button"
+                        app:layout_constraintTop_toBottomOf="@id/SIRUV385Button" />
+
+                <Button
+                        android:id="@+id/LWUV385Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="LW"
+                        app:layout_constraintStart_toStartOf="@id/MIRUV385Button"
+                        app:layout_constraintTop_toBottomOf="@id/MIRUV385Button" />
+
+                <Button
+                        android:id="@+id/UVUV385Button"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="UV"
+                        app:layout_constraintStart_toStartOf="@id/LIRUV385Button"
+                        app:layout_constraintTop_toBottomOf="@id/LIRUV385Button" />
+
+
+                <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:text="SW Gain"
+                        android:textSize="@dimen/titleSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/normalButton" />
+
+                <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:text="Channel 2 : UV365"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toStartOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+                <SeekBar
+                        android:id="@+id/swGainCH2SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/dp4"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginEnd="@dimen/dp8"
+                        android:max="7"
+                        android:progress="@{gattWrapper.swGain.ch2UV365}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:text="Channel 4 : UV385"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/swGainCH2SeekBar" />
+
+
+                <SeekBar
+                        android:id="@+id/swGainCH4SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/dp4"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginEnd="@dimen/dp8"
+                        android:max="7"
+                        android:progress="@{gattWrapper.swGain.ch4UV385}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+
+                <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:text="HW Gain"
+                        android:textSize="@dimen/titleSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/swGainCH4SeekBar" />
+
+                <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:text="Channel 2 : UV365"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toStartOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+                <SeekBar
+                        android:id="@+id/hwGainCH2SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/dp4"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginEnd="@dimen/dp8"
+                        android:max="15"
+                        android:progress="@{gattWrapper.hwGain.ch2UV365}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:text="Channel 4 : UV385"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toStartOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/hwGainCH2SeekBar" />
+
+
+                <SeekBar
+                        android:id="@+id/hwGainCH4SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/dp4"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginEnd="@dimen/dp8"
+                        android:max="15"
+                        android:progress="@{gattWrapper.hwGain.ch4UV385}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView12"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <Button
+                        android:id="@+id/ADCMUXReadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Read"
+                        app:layout_constraintStart_toStartOf="@id/efm8ChanCurrentReadButton"
+                        app:layout_constraintTop_toTopOf="@id/SIRUV365Button" />>
+
+                <Button
+                        android:id="@+id/ADCMUXSaveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Save"
+                        app:layout_constraintStart_toStartOf="@id/efm8ChanCurrentReadButton"
+                        app:layout_constraintTop_toBottomOf="@id/ADCMUXReadButton" />>
+
+                <Button
+                        android:id="@+id/swGainReadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="read"
+                        app:layout_constraintEnd_toStartOf="@+id/swGainSaveButton"
+                        app:layout_constraintTop_toTopOf="@+id/swGainSaveButton" />
+
+                <Button
+                        android:id="@+id/swGainSaveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="save"
+                        app:layout_constraintEnd_toEndOf="@+id/swGainCH2SeekBar"
+                        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+                <Button
+                        android:id="@+id/hwGainSaveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="save"
+                        app:layout_constraintEnd_toEndOf="@+id/hwGainCH2SeekBar"
+                        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+                <Button
+                        android:id="@+id/hwGainReadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="read"
+                        app:layout_constraintEnd_toStartOf="@+id/hwGainSaveButton"
+                        app:layout_constraintTop_toTopOf="@+id/hwGainSaveButton" />
+
+
+                <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:text="EFM8 Channel Current"
+                        android:textSize="@dimen/titleSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/hwGainCH4SeekBar" />
+                ---
+
+                <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Channel 0"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
+                <EditText
+                        android:id="@+id/efm8ChanCurrentChan0EditText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:inputType="number"
+                        android:text="@{String.valueOf(gattWrapper.efm8ChannelCurrent.ch0IR)}"
+                        app:layout_constraintStart_toStartOf="@+id/textView14"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                ---
+
+                <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Channel 1"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+
+                <EditText
+                        android:id="@+id/efm8ChanCurrentChan1EditText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:inputType="number"
+                        android:text="@{String.valueOf(gattWrapper.efm8ChannelCurrent.ch1Green)}"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                ---
+
+                <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Channel 2"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+
+                <EditText
+                        android:id="@+id/efm8ChanCurrentChan2EditText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:inputType="number"
+                        android:text="@{String.valueOf(gattWrapper.efm8ChannelCurrent.ch2UV365)}"
+                        app:layout_constraintStart_toStartOf="@+id/textView16"
+                        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                ---
+
+                <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Channel 3"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/efm8ChanCurrentChan0EditText" />
+
+
+                <EditText
+                        android:id="@+id/efm8ChanCurrentChan3EditText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:inputType="number"
+                        android:text="@{String.valueOf(gattWrapper.efm8ChannelCurrent.ch3Red)}"
+                        app:layout_constraintStart_toStartOf="@+id/textView17"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                ---
+
+                <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Channel 4"
+                        android:textSize="@dimen/subTitleSize"
+                        app:layout_constraintStart_toEndOf="@+id/textView17"
+                        app:layout_constraintTop_toBottomOf="@+id/efm8ChanCurrentChan1EditText" />
+
+                <EditText
+                        android:id="@+id/efm8ChanCurrentChan4EditText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:inputType="number"
+                        android:text="@{String.valueOf(gattWrapper.efm8ChannelCurrent.ch4UV385)}"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                ---
+
+                <Button
+                        android:id="@+id/efm8ChanCurrentReadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="read"
+                        app:layout_constraintEnd_toEndOf="@+id/efm8ChanCurrentSaveButton"
+                        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+                <Button
+                        android:id="@+id/efm8ChanCurrentSaveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="save"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/efm8ChanCurrentReadButton" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <View
+                android:visibility="gone"
+                android:focusable="true"
+                android:clickable="true"
+                android:id="@+id/blockingView"
+                android:background="@color/blockGray"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+    </RelativeLayout>
+
+</layout>

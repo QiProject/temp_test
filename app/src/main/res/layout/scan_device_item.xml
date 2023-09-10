@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="item"
+                type="com.example.bdfuv.manager.BLEManager.DeviceWithRssi"
+        />
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffdddddd"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+        <LinearLayout
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@{item.bluetoothDevice.name}"
+                    tools:text="Clartici"
+            />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="rssi : "
+            />
+
+            <TextView
+                    android:id="@+id/rssi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    tools:text="63"
+                    android:text="@{String.valueOf(item.rssi)}"
+            />
+        </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Mac Address : "
+                />
+
+                <TextView
+                        android:id="@+id/mac_address"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.bluetoothDevice.address}"
+                        android:layout_width="wrap_content"
+                        tools:text="DO:CF:5E:5B"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

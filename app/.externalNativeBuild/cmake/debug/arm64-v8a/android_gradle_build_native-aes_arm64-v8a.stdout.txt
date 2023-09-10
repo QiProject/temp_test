@@ -1,0 +1,33 @@
+[1/2] Building C object CMakeFiles/native-aes.dir/native-aes.c.o
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:212:23: warning: passing 'const uint8_t [16]' to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        AES_ShiftRows(block, AES_ShiftRowTab_Inv);
+                             ^~~~~~~~~~~~~~~~~~~
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:102:52: note: passing argument to parameter 'shifttab' here
+static void AES_ShiftRows(uint8_t *state, uint8_t *shifttab)
+                                                   ^
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:213:22: warning: passing 'const uint8_t [256]' to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+        AES_SubBytes(block, AES_Sbox_Inv);
+                            ^~~~~~~~~~~~
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:90:51: note: passing argument to parameter 'sbox' here
+static void AES_SubBytes(uint8_t *state, uint8_t *sbox)
+                                                  ^
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:219:24: warning: passing 'const uint8_t [16]' to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                AES_ShiftRows(block, AES_ShiftRowTab_Inv);
+                                     ^~~~~~~~~~~~~~~~~~~
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:102:52: note: passing argument to parameter 'shifttab' here
+static void AES_ShiftRows(uint8_t *state, uint8_t *shifttab)
+                                                   ^
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:220:23: warning: passing 'const uint8_t [256]' to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                AES_SubBytes(block, AES_Sbox_Inv);
+                                    ^~~~~~~~~~~~
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:90:51: note: passing argument to parameter 'sbox' here
+static void AES_SubBytes(uint8_t *state, uint8_t *sbox)
+                                                  ^
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:278:53: warning: passing 'const uint8_t [32]' to parameter of type 'uint8_t *' (aka 'unsigned char *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    int tp = decrypt((uint8_t *)data, encryptBlock, aesKey, 32);
+                                                    ^~~~~~
+/Users/art/ICIEngineer/app/src/main/cpp/native-aes.c:227:61: note: passing argument to parameter 'userKey' here
+int decrypt(uint8_t *block, uint8_t *decryptBlock, uint8_t *userKey, int keyLen)
+                                                            ^
+5 warnings generated.
+[2/2] Linking C shared library /Users/art/ICIEngineer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-aes.so

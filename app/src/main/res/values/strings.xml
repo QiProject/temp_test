@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">NIVEA Sun</string>
+
+    <!--Toast Message-->
+    <string name="TOAST_BLUETOOTH_NOT_SUPPORTED">Bluetooth not supported</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main">MainActivity</string>
+
+
+    <string name="font_nivea_light">nivea_light</string>
+    <string name="font_nivea_creme_initial">nivea_creme_initial</string>
+    <string name="title_activity_setting">Setting</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="apply_uv_sensor">Apply UV Sensor on indicated skin area and start measurement</string>
+    <string name="apply_uv_sensor_to">Apply UV Sensor to</string>
+    <string name="to">to</string>
+    <string name="repeat_measurement">repeat \n measurement</string>
+    <string name="options">options</string>
+    <string name="data_protection_policy">Data Protection Policy</string>
+    <string name="settings">Settings</string>
+    <string name="press">Press</string>
+    <string name="my_continue">continue</string>
+    <string name="connected">connected</string>
+    <string name="uv_sensor_not_found">UV Sensor not found</string>
+    <string name="searching_for_uv_sensor">Searching for UV Sensor</string>
+    <string name="please_turn_on_uv_sensor">Please turn on UV Sensor</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="connect">connect</string>
+    <string name="press_continue_to_start_new_measurement">Press CONTINUE to start new measurement</string>
+    <string name="measurement_complete">Measurement completed</string>
+    <string name="please_press_next">Please press CONTINUE and select all activities that you\'ve done before the
+        measurement
+    </string>
+    <string name="measurement_session_completed">Measurement session completed</string>
+    <string name="tap_to_finish">Tap to finish</string>
+
+</resources>
+
+

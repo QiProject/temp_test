@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" >
+    <data>
+        <variable
+                name="item"
+                type="com.example.bdfuv.model.CheckEditableInterface"
+        />
+    </data>
+
+
+    <LinearLayout
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.example.bdfuv.custom_view.TwoStateIndicator
+                android:id="@+id/indicator"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+        <TextView
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@={item.name}"
+                tools:text="swimming"
+                style="@style/text_light"/>
+
+
+    </LinearLayout>
+</layout>

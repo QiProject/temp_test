@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       tools:context=".ExpertFragment">
+
+        <Button
+                android:id="@+id/deviceSelectionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Selection"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/testMeasurementButton"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+                android:textAllCaps="false"
+                android:id="@+id/testMeasurementButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test Measurement"
+                app:layout_constraintTop_toBottomOf="@+id/deviceSelectionButton"
+                app:layout_constraintBottom_toTopOf="@+id/deviceConfigButton"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+                android:textAllCaps="false"
+                android:id="@+id/deviceConfigButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Configuration"
+                app:layout_constraintTop_toBottomOf="@+id/testMeasurementButton"
+                app:layout_constraintBottom_toTopOf="@+id/appConfigButton" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+                android:textAllCaps="false"
+                android:id="@+id/appConfigButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Configuration"
+                app:layout_constraintTop_toBottomOf="@+id/deviceConfigButton"
+                app:layout_constraintBottom_toTopOf="@+id/exportFilePathButton" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+                android:textAllCaps="false"
+                android:id="@+id/exportFilePathButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Export File Path"
+                app:layout_constraintTop_toBottomOf="@+id/appConfigButton"
+                app:layout_constraintBottom_toTopOf="@+id/exitButton" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <Button
+                android:id="@+id/exitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exportFilePathButton" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

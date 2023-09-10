@@ -1,0 +1,15 @@
+Executable : /Users/art/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
+arguments : 
+-H/Users/art/ICIEngineer/app/src/main/cpp
+-B/Users/art/ICIEngineer/app/.externalNativeBuild/cmake/debug/armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-23
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/art/ICIEngineer/app/build/intermediates/cmake/debug/obj/armeabi-v7a
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=/Users/art/Library/Android/sdk/ndk-bundle
+-DCMAKE_CXX_FLAGS=
+-DCMAKE_TOOLCHAIN_FILE=/Users/art/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/Users/art/Library/Android/sdk/cmake/3.6.4111459/bin/ninja
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

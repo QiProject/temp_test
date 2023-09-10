@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".SettingActivity">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                  android:text="Settings"
+                  style="@style/text_light"
+                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                  app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                  android:layout_marginTop="@dimen/dp32" app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.example.bdfuv.custom_view.FontButton
+                android:foreground="@drawable/round_button"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="continue"
+                app:theme="@style/AppTheme.DarkBlueButton"
+                android:background="@drawable/dark_blue_button"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/button_margin_start"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/button_margin_start"
+                android:layout_marginBottom="18dp" app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

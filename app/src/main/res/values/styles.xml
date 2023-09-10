@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+    </style>
+
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/pureWhite</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="AppTheme.MangoButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/mango</item>
+        <item name="android:textColor">@color/pureWhite</item>
+    </style>
+
+    <style name="AppTheme.DarkBlueButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/niveaBlue1</item>
+        <item name="android:textColor">@color/pureWhite</item>
+    </style>
+
+    <style name="AppTheme.LightBlueButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/niveaBlue2</item>
+        <item name="android:textColor">@color/pureWhite</item>
+    </style>
+
+
+    <style name="creme_initial" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/nivea_cremelnitial</item>
+        <item name="android:textColor">@color/niveaBlue1</item>
+        <item name="android:textSize">46sp</item>
+    </style>
+
+    <style name="text_light" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/nivea_light</item>
+        <item name="android:textColor">@color/niveaBlue1</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+
+</resources>

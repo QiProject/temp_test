@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        tools:showIn="@layout/activity_main"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+        <ImageView
+                android:src="@drawable/bdf_logo"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_alignParentEnd="true"
+                android:layout_height="60dp"
+                android:layout_width="60dp"/>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,3 @@
+/Users/art/ICIEngineer/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/edit_cache.dir
+/Users/art/ICIEngineer/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/rebuild_cache.dir
+/Users/art/ICIEngineer/app/.externalNativeBuild/cmake/release/x86/CMakeFiles/native-aes.dir

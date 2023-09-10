@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+        <variable
+                name="gattWrapper"
+                type="com.example.bdfuv.model.BLEGattWrapper"
+        />
+    </data>
+
+    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent">
+
+        <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+            >
+
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/batteryLayout" android:layout_marginTop="8dp"
+                        android:id="@+id/melaninLayout" app:layout_constraintTop_toBottomOf="@+id/hardwareLayout">
+
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Melanin index : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            tools:text="50"
+                            android:text="@{String.valueOf(gattWrapper.melanin)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/melaninTextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@+id/batteryLayout" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/melaninLayout"
+                        android:id="@+id/rednessLayout">
+
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Redness : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            tools:text="50"
+                            android:text="@{String.valueOf(gattWrapper.redness)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/rednessTextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/batteryLayout" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="battery : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp" android:id="@+id/textView6"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="@{String.valueOf(gattWrapper.battery) +`%`}"
+                            tools:text="80%"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/batteryTextView"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tempLayout" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/rednessLayout">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Temperature : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp" android:id="@+id/textView16"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="@{String.valueOf(gattWrapper.temp)}"
+                            tools:text="80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/tempTextView"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/humidLayout" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tempLayout">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Humidity : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp" android:id="@+id/textView26"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="@{String.valueOf(gattWrapper.humid)}"
+                            tools:text="80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/humidTextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ch2Layout"
+                        android:layout_marginTop="@dimen/dp8"
+                        app:layout_constraintTop_toBottomOf="@+id/humidLayout"
+                        app:layout_constraintStart_toStartOf="@+id/humidLayout">
+
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Ch 2 : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            tools:text="50"
+                            android:text="@{String.valueOf(gattWrapper.ch2)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/ch3TextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ch4Layout"
+                        app:layout_constraintTop_toBottomOf="@+id/ch2Layout"
+                        app:layout_constraintStart_toStartOf="@+id/ch2Layout">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Ch 4 : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            tools:text="50"
+                            android:text="@{String.valueOf(gattWrapper.ch4)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/ch5TextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/snLayout"
+                        app:layout_constraintStart_toStartOf="@+id/batteryLayout" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/batteryLayout">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="Serial Number : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="@{String.valueOf(gattWrapper.serialNumber)}"
+                            tools:text="CS0119103002F"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/snTextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:visibility="visible"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/firmwareLayout"
+                        app:layout_constraintStart_toStartOf="@+id/batteryLayout" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/snLayout">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="firmware version : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            tools:text="FW:v1.2.2"
+                            android:text="@{String.valueOf(gattWrapper.firmwareRevision)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/firmwareTextView"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:visibility="visible"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hardwareLayout"
+                        app:layout_constraintStart_toStartOf="@+id/batteryLayout" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/firmwareLayout">
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            android:text="hardware version : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" tools:layout_editor_absoluteY="216dp"
+                            tools:layout_editor_absoluteX="48dp"/>
+                    <TextView
+                            android:textSize="@dimen/testMeasurementTextSize"
+                            tools:text="HW:v1.1.0"
+                            android:layout_width="wrap_content"
+                            android:text="@{String.valueOf(gattWrapper.hardwareRevision)}"
+                            android:layout_height="wrap_content" tools:layout_editor_absoluteY="121dp"
+                            tools:layout_editor_absoluteX="166dp" android:id="@+id/hardwareTextView"/>
+                </LinearLayout>
+
+
+                <Button
+                        android:id="@+id/swTriggerButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="sw trigger"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ch2Layout" />
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5"
+                        android:id="@+id/guideline"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <View
+                android:visibility="gone"
+                android:focusable="true"
+                android:clickable="true"
+                android:id="@+id/blockingView"
+                android:background="@color/blockGray"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+    </RelativeLayout>
+
+</layout>

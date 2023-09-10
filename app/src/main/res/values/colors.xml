@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00136F</color>
+    <color name="colorPrimaryDark">#326bad</color>
+    <color name="colorAccent">@color/niveaBlue1</color>
+
+    <color name="BluegigaGreen">#8fc84e</color>
+    <color name="pureWhite">#FFFFFF</color>
+
+    <color name="niveaBlue1">#00136f</color>
+    <color name="niveaBlue2">#326bad</color>
+    <color name="niveaBlue3">#adc3e5</color>
+    <color name="niveaBlue4">#c3d5f0</color>
+
+    <color name="warmGrey">#999999</color>
+
+    <color name="mango">#fe9527</color>
+
+    <color name="ripple">#33353535</color>
+
+    <color name="blockGray">#809B9B9B</color>
+    <color name="transparent">#00000000</color>
+</resources>

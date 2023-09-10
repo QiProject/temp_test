@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="item"
+                type="com.example.bdfuv.model.CheckEditableInterface"
+        />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <CheckBox
+                android:checked="@={item.checked}"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+        <EditText
+                android:singleLine="true"
+                android:minWidth="100dp"
+                android:imeOptions="actionDone"
+                android:text="@={item.name}"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+</layout>
